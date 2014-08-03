@@ -153,7 +153,7 @@ class MailTester extends Module implements MailTestable
      */
     public function assertEmailWasSentTo($recipient, MailTesterMessage $email)
     {
-        $this->assertContains("<{$recipient}>", $email->getRecipients());
+        $this->assertContains($recipient, $email->getRecipients());
     }
 
     /**
@@ -162,7 +162,7 @@ class MailTester extends Module implements MailTestable
      */
     public function assertNotEmailWasSentTo($recipient, MailTesterMessage $email)
     {
-        $this->assertNotContains("<{$recipient}>", $email->getRecipients());
+        $this->assertNotContains($recipient, $email->getRecipients());
     }
 
     /**
@@ -171,7 +171,7 @@ class MailTester extends Module implements MailTestable
      */
     public function assertEmailWasSentFrom($sender, MailTesterMessage $email)
     {
-        $this->assertContains("<{$sender}>", $email->getSender());
+        $this->assertContains($sender, $email->getSender());
     }
 
     /**
@@ -180,6 +180,6 @@ class MailTester extends Module implements MailTestable
      */
     public function assertNotEmailWasSentFrom($sender, MailTesterMessage $email)
     {
-        $this->assertNotContains("<{$sender}>", $email->getSender());
+        $this->assertNotContains($sender, $email->getSender());
     }
 }
