@@ -10,7 +10,7 @@ Install MailTester through Composer by adding in your composer.json:
 ```js
 "require": {
     "codeception/codeception": "~2.0",
-    "psyao/mailtester": "~1.0"
+    "psyao/mailtester": "~1.1"
 }
 ```
 
@@ -28,7 +28,7 @@ modules:
             provider: "MailCatcher"
 ```
 
-Currently there is one provider supported.
+Currently there is two providers supported.
 
 ### MailCatcher
 
@@ -44,6 +44,22 @@ modules:
             MailCatcher:
                 url: 'http://192.168.10.10'
                 port: '1080'
+```
+
+### MailTrap
+
+[MailTrap](https://mailtrap.io/) is an online fake SMTP server for development teams to test, view and share emails sent from the development and staging environments.
+
+```yml
+class_name: FunctionalTester
+modules:
+    ...
+    config:
+        MailTester:
+            provider: "MailTrap"
+            MailTrap:
+                api_token: 'myw0nd3rfu7ap1t0k3n'
+                inbox_id: '1337'
 ```
 
 
@@ -72,6 +88,12 @@ $I->dontSeeLastEmailWasSentTo('baz@example.com');
 ## Methods
 
 See [MailTester.php](https://github.com/psyao/mailtester/blob/master/src/Codeception/Module/MailTester.php) for available methods.
+
+
+## Changelog
+
+- 1.1 : Added new provider (mailtrap.io)
+- 1.0 : First version
 
 
 ## License
