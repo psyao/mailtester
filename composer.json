@@ -1,5 +1,5 @@
 {
-  "name": "codeception/module",
+  "name": "psyao/mailtester",
   "description": "Test emails in Codeception tests",
   "authors": [
     {
