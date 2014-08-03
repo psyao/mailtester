@@ -10,7 +10,7 @@ Install MailTester through Composer by adding in your composer.json:
 ```js
 "require": {
     "codeception/codeception": "~2.0",
-    "psyao/mailtester": "1.0.*"
+    "psyao/mailtester": "~1.0"
 }
 ```
 

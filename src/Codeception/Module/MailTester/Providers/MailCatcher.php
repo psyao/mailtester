@@ -13,7 +13,7 @@ class MailCatcher extends Providers implements MailTestable
     /**
      * @var array
      */
-    protected $requiredFields = array('url', 'port');
+    protected $requiredFields = ['url', 'port'];
 
     function __construct(array $config)
     {
@@ -22,7 +22,7 @@ class MailCatcher extends Providers implements MailTestable
         $this->validateConfig();
 
         $url = $this->config['url'] . ':' . $this->config['port'];
-        $this->mailcatcher = new Client(array('base_url' => $url));
+        $this->mailcatcher = new Client(['base_url' => $url]);
     }
 
     /**

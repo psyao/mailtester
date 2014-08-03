@@ -15,12 +15,12 @@ class MailTester extends Module implements MailTestable
     /**
      * @var array
      */
-    protected $config = array('provider');
+    protected $config = ['provider'];
 
     /**
      * @var array
      */
-    protected $requiredFields = array('provider');
+    protected $requiredFields = ['provider'];
 
     /**
      * @return void

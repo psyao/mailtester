@@ -7,11 +7,11 @@ abstract class Providers
     /**
      * @var array
      */
-    protected $config = array();
+    protected $config = [];
     /**
      * @var array
      */
-    protected $requiredFields = array();
+    protected $requiredFields = [];
 
     /**
      * @return void

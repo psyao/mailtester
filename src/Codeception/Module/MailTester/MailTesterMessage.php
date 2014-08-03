@@ -13,7 +13,7 @@ class MailTesterMessage
     /**
      * @var array
      */
-    protected $recipients = array();
+    protected $recipients = [];
     /**
      * @var string
      */
