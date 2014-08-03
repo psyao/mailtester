@@ -22,7 +22,7 @@ First enable the module in the suite config, for example, in functional.suite.ym
 ```yml
 class_name: FunctionalTester
 modules:
-    ...
+    enabled: [Filesystem, FunctionalHelper, MailTester]
     config:
         MailTester:
             provider: "MailCatcher"
@@ -71,7 +71,7 @@ $I->dontSeeLastEmailWasSentTo('baz@example.com');
 
 ## Methods
 
-See 'MailTester' source code.
+See [MailTester.php](https://github.com/psyao/mailtester/blob/master/src/Codeception/Module/MailTester.php) for available methods.
 
 
 ## License
