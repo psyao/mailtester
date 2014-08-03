@@ -4,8 +4,10 @@ use Codeception\Module\MailTester\MailTestable;
 use Codeception\Module\MailTester\MailTesterMessage;
 use GuzzleHttp\Client;
 
-class MailCatcher extends Providers implements MailTestable
+class MailCatcher implements MailTestable
 {
+    use ProviderTrait;
+
     /**
      * @var Client
      */

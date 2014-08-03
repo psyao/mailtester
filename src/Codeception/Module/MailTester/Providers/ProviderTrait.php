@@ -2,7 +2,7 @@
 
 use Codeception\Exception\ModuleConfig;
 
-abstract class Providers
+trait ProviderTrait
 {
     /**
      * @var array
