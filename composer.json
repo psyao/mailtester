@@ -1,6 +1,7 @@
 {
   "name": "psyao/mailtester",
   "description": "Test emails in Codeception tests",
+  "license": "MIT",
   "authors": [
     {
       "name": "Steve Aguet",
