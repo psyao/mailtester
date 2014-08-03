@@ -12,14 +12,11 @@ class MailCatcher implements MailTestable
      * @var Client
      */
     protected $mailcatcher;
-    /**
-     * @var array
-     */
-    protected $requiredFields = ['url', 'port'];
 
     function __construct(array $config)
     {
         $this->config = $config;
+        $this->requiredFields = ['url', 'port'];
 
         $this->validateConfig();
 
